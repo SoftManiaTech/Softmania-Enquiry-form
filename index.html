@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enquiry form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-step active" id="step-1">
+        <h2>Choose Your Problem!</h2>
+        <button class="option-btn" data-next="i-am-not-sure">
+          I am not sure, where to start. Please guide me
+        </button>
+        <button class="option-btn" data-next="i-am-attended-many-course">
+          I have attended many courses online / offline. But not able to get
+          real time knowledge
+        </button>
+        <button class="option-btn" data-next="step-2">
+          Just show me what you are selling..
+        </button>
+      </div>
+
+      <!-- I am not sure -->
+      <div class="form-step" id="i-am-not-sure">
+        <h2>Have you started learning on your own?</h2>
+        <button class="option-btn" data-next="i-am-not-sure-yes">Yes</button>
+        <button class="option-btn" data-next="i-am-not-sure-no">No</button>
+      </div>
+
+      <!-- i-am-not-sure-yes -->
+      <div class="form-step" id="i-am-not-sure-yes">
+        <h2>
+          Your Question?
+        </h2>
+        <button class="option-btn" data-next="preview">option</button>
+        <button class="option-btn" data-next="preview">option</button>
+      </div>
+
+      <!-- i-am-not-sure-no -->
+      <div class="form-step" id="i-am-not-sure-no">
+        <h2>
+          So you are starting newly, What are you expecting from our side?
+        </h2>
+        <button class="option-btn" data-next="preview">option</button>
+        <button class="option-btn" data-next="preview">option</button>
+      </div>
+      
+      <!-- i-am-attended-many-course -->
+      <div class="form-step" id="i-am-attended-many-course">
+        <h2>
+            Why do you want to learn Splunk?
+        </h2>
+        <button class="option-btn" data-next="splunk-get-a-new-job">To get a new job with more salary</button>
+        <button class="option-btn" data-next="splunk-manage-my-project">To manage my project</button>
+        <button class="option-btn" data-next="splunk-just-for-knowledge">Just for my knowledge</button>
+      </div>
+
+      <!-- splunk-get-a-new-job -->
+      <div class="form-step" id="splunk-get-a-new-job">
+        <h2>
+            What is your knowledge level on Splunk?
+        </h2>
+        <button class="option-btn" data-next="splunk-biginner">Beginner</button>
+        <button class="option-btn" data-next="splunk-intermediate">Intermediate</button>
+        <button class="option-btn" data-next="splunk-expert">Expert</button>
+      </div>
+
+      <!-- splunk-manage-my-project -->
+      <div class="form-step" id="splunk-biginner">
+        <h2>
+            Question
+        </h2>
+        <button class="option-btn" data-next="preview">option</button>
+        <button class="option-btn" data-next="preview">option</button>
+      </div>
+
+      <!-- splunk-biginner -->
+      <div class="form-step" id="splunk-biginner">
+        <h2>
+            Question
+        </h2>
+        <button class="option-btn" data-next="preview">option</button>
+        <button class="option-btn" data-next="preview">option</button>
+      </div>
+
+      <!-- splunk-intermediate -->
+      <div class="form-step" id="splunk-intermediate">
+        <h2>
+            Question
+        </h2>
+        <button class="option-btn" data-next="preview">option</button>
+        <button class="option-btn" data-next="preview">option</button>
+      </div>
+
+      <!-- splunk expert -->
+      <div class="form-step" id="splunk-expert">
+        <h2>
+            What are you expecting from our side?
+        </h2>
+        <button class="option-btn" data-next="splunk-expert-advanced">Learn Advanced concepts</button>
+        <button class="option-btn" data-next="splunk-expert-knowledge">Revise my knowledge</button>
+        <button class="option-btn" data-next="splunk-expert-interview">Interview preparation</button>
+      </div>
+      
+      <!-- splunk-expert-advanced -->
+      <div class="form-step" id="splunk-expert-advanced">
+        <h2>
+            Question?
+        </h2>
+        <button class="option-btn" data-next="preview">option</button>
+        <button class="option-btn" data-next="preview">option</button>
+        <button class="option-btn" data-next="preview">option</button>
+      </div>
+
+      <div class="form-step" id="step-2">
+        <h2>Have you started learning on your own?</h2>
+        <button class="option-btn" data-next="step-3-yes" data-answer="Yes">
+          Yes
+        </button>
+        <button class="option-btn" data-next="step-3-no" data-answer="No">
+          No
+        </button>
+      </div>
+      <div class="form-step" id="step-3-yes">
+        <h2>What is your knowledge level on Splunk?</h2>
+        <button class="option-btn" data-next="preview" data-answer="Beginner">
+          Beginner
+        </button>
+        <button
+          class="option-btn"
+          data-next="preview"
+          data-answer="Intermediate"
+        >
+          Intermediate
+        </button>
+        <button class="option-btn" data-next="preview" data-answer="Expert">
+          Expert
+        </button>
+      </div>
+      <div class="form-step" id="step-3-no">
+        <h2>
+          So you are starting newly. What are you expecting from our side?
+        </h2>
+        <button
+          class="option-btn"
+          data-next="preview"
+          data-answer="Learn Advanced concepts"
+        >
+          Learn Advanced concepts
+        </button>
+        <button
+          class="option-btn"
+          data-next="preview"
+          data-answer="Revise my knowledge"
+        >
+          Revise my knowledge
+        </button>
+        <button
+          class="option-btn"
+          data-next="preview"
+          data-answer="Interview preparation"
+        >
+          Interview preparation
+        </button>
+      </div>
+      <div class="form-step" id="preview">
+        <h2>Preview Your Responses</h2>
+        <div id="preview-content"></div>
+        <button class="submit-btn">Submit</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
